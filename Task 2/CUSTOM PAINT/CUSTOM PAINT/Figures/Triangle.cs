@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomPaint.Classes
+namespace CustomPaint.Figures
 {
-    internal class Triangle
+    public class Triangle : Figure
     {
         private protected Point _a;
         private protected Point _b;
@@ -19,9 +19,17 @@ namespace CustomPaint.Classes
             _c = c;
         }
 
-        public double triangleSquare()
+        public override double Square()
         {
             return 0.5*((_a.x*(_b.y - _c.y)) + (_b.x*(_c.y - _a.y)) + (_c.x*(_a.y - _b.y)));
+        }
+
+        public override double Length()
+        {
+            double AB = Math.Sqrt(Math.Pow((_b.x - _a.x), 2) + Math.Pow((_b.y - _a.y), 2));
+            double AC = Math.Sqrt(Math.Pow((_c.x - _a.x), 2) + Math.Pow((_c.y - _a.y), 2));
+            double BC = Math.Sqrt(Math.Pow((_c.x - _b.x), 2) + Math.Pow((_c.y - _b.y), 2));
+            return AB + AC + BC;
         }
     }
 }

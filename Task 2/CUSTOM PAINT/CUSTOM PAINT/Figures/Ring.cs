@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomPaint.Classes
+namespace CustomPaint.Figures
 {
-    internal class Ring
+    public class Ring : Figure
     {
         private protected int _insideRadius;
         private protected int _outsideRadius;
@@ -36,14 +36,14 @@ namespace CustomPaint.Classes
                 Circle Inside = new Circle(_insideRadius, x, y);
             }
         }
-        public double RingSquare()
+        public override double Square()
         {
-           return Outside.CircleSquare() - Inside.CircleSquare();
+           return Outside.Square() - Inside.Square();
         }
 
-        public double RingLength()
+        public override double Length()
         {
-            return Outside.CircleLenght() + Inside.CircleLenght();
+            return Outside.Length() + Inside.Length();
         }
 
     }

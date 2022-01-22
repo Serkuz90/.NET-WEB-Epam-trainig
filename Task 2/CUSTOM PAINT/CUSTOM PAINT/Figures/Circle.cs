@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomPaint.Classes
+namespace CustomPaint.Figures
 {
-    internal class Circle
+    public class Circle : Figure
     {
         private protected int _radius;
         Point _point;
@@ -24,13 +24,13 @@ namespace CustomPaint.Classes
             _point.y = y;
         }
 
-        public double CircleLenght()
+        public override double Length()
         {
             double length = 2 * Math.PI * _radius;
             return length;
         }
 
-        public double CircleSquare()
+        public override double Square()
         {
             double square = Math.PI * (_radius * _radius);
             return square;

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomPaint.Classes
+namespace CustomPaint.Figures
 {
-    internal class Quadrate
+    public class Quadrate : Figure
     {
         private protected int _width;
         public Quadrate(int width)
@@ -21,7 +21,12 @@ namespace CustomPaint.Classes
             }
         }
 
-        public virtual double CalculateSquare()
+        public override double Square()
+        {
+            return Math.Pow(_width, 2);
+        }
+
+        public override double Length()
         {
             return _width*4;
         }

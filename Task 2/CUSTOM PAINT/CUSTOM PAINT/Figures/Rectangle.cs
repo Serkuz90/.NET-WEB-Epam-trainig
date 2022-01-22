@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomPaint.Classes
+namespace CustomPaint.Figures
 {
-    internal class Rectangle : Quadrate
+    public class Rectangle : Quadrate
     {
         private protected int _length;
         public Rectangle(int length, int width) : base(width)
@@ -21,9 +21,14 @@ namespace CustomPaint.Classes
             }
         }
 
-        public override double CalculateSquare()
+        public override double Square()
         {
             return _length * _width;
+        }
+
+        public override double Length()
+        {
+            return (_length*2)+(_width*2);
         }
     }
 }
