@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.Classes
+namespace GameDevelopment
 {
-    internal class Enemy : Entity
+    public class Program
     {
-       
+        static void Main(string[] args)
+        {
+
+        }
+        
     }
 }
