@@ -104,8 +104,10 @@ namespace DynamicArray.Classes
             {
                 throw new ArgumentOutOfRangeException();
             }
-            if (_length <= _capacity)
+            
+            if (_length  < _capacity)
             {
+
                 for (int i = _length; i > index; i--)
                 {
                     _defoultArray[i] = _defoultArray[i-1];
@@ -115,9 +117,13 @@ namespace DynamicArray.Classes
             else
             {
                 _capacity = _capacity * 2;
+
+                T[] temp = _defoultArray;
+                _defoultArray = new T[_capacity];
+                Array.Copy(temp, _defoultArray, _length++);
+
                 Insert(index, item);
             }
-            _length++;
         }
 
         public bool Remove(T item)
@@ -134,17 +140,14 @@ namespace DynamicArray.Classes
             return true;
         }
 
-        public int Capacity()
+        public int Capacity
         {
-            return _capacity;
+            get { return _capacity; }
         }
-        public int Length()
+        public int Length
         {
-            return _length;
+            get { return _length; }
         }
-
-
-
 
         public IEnumerator<T> GetEnumerator()
         {

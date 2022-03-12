@@ -108,7 +108,7 @@ namespace Weakest.Text
             Dictionary<int, string> wordDictionary = new Dictionary<int, string>();
             for (int i = 0; i < wordList.Count; i++)            // заполняем словарь не повторяющимеся словами
             {
-                if (wordDictionary.ContainsValue(wordList[i])!= true)
+                if (!wordDictionary.ContainsValue(wordList[i]))
                 {
                     wordDictionary.Add(i, wordList[i]);
                 }
