@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+menu{
+    background-color: cyan;
+    width: 198px;
+    box-shadow: 4px 4px 1px 1px coral;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+li{
+    list-style: none;
+    color: cornsilk;
+    margin: 15px;
+
+}

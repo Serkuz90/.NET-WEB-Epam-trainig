@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.registraciya
+{
+    color: white;
+    padding-bottom: 10px;
+}
+
+.wrapper
+{
+    margin: 20px 0px 20px 20px;
+}
+
+.E-mail
+{
+    width: 400px;
+
+}
+.pass
+{
+    width: 150px;
+}
+.text   
+{
+    color: white;
+    margin-top: 15px;
+
+}
+
+.SendButt
+{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: violet;
+    border: none;
+}
+
+.password-container
+{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.container
+{
+    width: 500px;
+    background-color: blue;
+    border: 3px solid black;
+
+}
